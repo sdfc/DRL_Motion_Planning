@@ -1,0 +1,1 @@
+python -m spinup.run plot ./logs/joint-angle-avoid_2023-06-20/joint-angle-avoid_20-17-11

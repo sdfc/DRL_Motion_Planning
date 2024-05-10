@@ -1,0 +1,186 @@
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            64,
+            64
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "clip_ratio":	0.2,
+    "env":	{
+        "<CR5AvoidVisualEnv instance>":	{
+            "action_space":	{
+                "Box([-0.5 -0.4 -0.4], [0.5 0.4 0.5], (3,), float32)":	{
+                    "_np_random":	null,
+                    "_shape":	[
+                        3
+                    ],
+                    "bounded_above":	"[ True  True  True]",
+                    "bounded_below":	"[ True  True  True]",
+                    "dtype":	"float32",
+                    "high":	"[0.5 0.4 0.5]",
+                    "low":	"[-0.5 -0.4 -0.4]"
+                }
+            },
+            "arm_center":	[
+                0.5,
+                0,
+                0.15
+            ],
+            "arm_id":	-1,
+            "arm_points":	"[[ 0.5         0.          0.2       ]\n [ 0.50402333  0.          0.19983787]\n [ 0.50802056  0.          0.19935251]\n ...\n [ 0.52722726 -0.37894777  0.27867503]\n [ 0.52929862 -0.37678891  0.28443105]\n [ 0.53       -0.37452415  0.29046942]]",
+            "cr5_id":	1,
+            "end_effector_index":	6,
+            "goal_obj_id":	3,
+            "gripper_index":	7,
+            "gripper_length":	0.16,
+            "images":	null,
+            "init_joint_positions":	[
+                0,
+                0.5,
+                -2.8,
+                1.57,
+                1.53,
+                0,
+                0,
+                0
+            ],
+            "is_good_view":	false,
+            "is_render":	false,
+            "joint_damping":	[
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05
+            ],
+            "joint_ranges":	[
+                5.8,
+                4,
+                5.8,
+                4,
+                5.8,
+                4,
+                6
+            ],
+            "lower_limits":	[
+                -0.967,
+                -2,
+                -2.96,
+                0.19,
+                -2.96,
+                -2.09,
+                -3.05
+            ],
+            "max_steps_one_episode":	5000,
+            "np_random":	"RandomState(MT19937)",
+            "num_joints":	8,
+            "observation_space":	{
+                "Box([ 0.15 -0.27  0.    0.15 -0.27  0.    0.15 -0.27  0.16], [0.85 0.27 0.55 0.85 0.27 0.55 0.85 0.27 0.71], (9,), float32)":	{
+                    "_np_random":	null,
+                    "_shape":	[
+                        9
+                    ],
+                    "bounded_above":	"[ True  True  True  True  True  True  True  True  True]",
+                    "bounded_below":	"[ True  True  True  True  True  True  True  True  True]",
+                    "dtype":	"float32",
+                    "high":	"[0.85 0.27 0.55 0.85 0.27 0.55 0.85 0.27 0.71]",
+                    "low":	"[ 0.15 -0.27  0.    0.15 -0.27  0.    0.15 -0.27  0.16]"
+                }
+            },
+            "obstacle_obj_id":	null,
+            "orientation":	[
+                0.7071067811865475,
+                -0.7071067811865476,
+                4.329780281177466e-17,
+                4.329780281177467e-17
+            ],
+            "rest_poses":	[
+                0,
+                0,
+                0,
+                1.5707963267948966,
+                0,
+                -1.0367255756846319,
+                0
+            ],
+            "robot_pos_obs":	[
+                0.21703724563121796,
+                -0.14528322219848633,
+                0.30034303665161133
+            ],
+            "step_counter":	0,
+            "terminated":	false,
+            "upper_limits":	[
+                0.967,
+                2,
+                2.96,
+                2.29,
+                2.96,
+                2.09,
+                3.05
+            ],
+            "urdf_root_path":	"/home/magic/anaconda3/envs/hrc/lib/python3.6/site-packages/pybullet_data",
+            "x_high_action":	0.5,
+            "x_high_obs":	0.85,
+            "x_high_obstacle":	0.55,
+            "x_low_action":	-0.5,
+            "x_low_obs":	0.15,
+            "x_low_obstacle":	0.45,
+            "y_high_action":	0.4,
+            "y_high_obs":	0.27,
+            "y_high_obstacle":	0.1,
+            "y_low_action":	-0.4,
+            "y_low_obs":	-0.27,
+            "y_low_obstacle":	-0.25,
+            "z_high_action":	0.5,
+            "z_high_obs":	0.55,
+            "z_high_obstacle":	0.15,
+            "z_low_action":	-0.4,
+            "z_low_obs":	0,
+            "z_low_obstacle":	0.07
+        }
+    },
+    "epochs":	200,
+    "exp_name":	"ppo-gripper-avoid-without-ou-fixedAll",
+    "gamma":	0.99,
+    "lam":	0.97,
+    "logger":	{
+        "<ppo.logx.EpochLogger object at 0x7f6dae088a90>":	{
+            "epoch_dict":	{},
+            "exp_name":	"ppo-gripper-avoid-without-ou-fixedAll",
+            "first_row":	true,
+            "is_debug":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"/home/magic/ZhangGZ/intention-aware-HRC/drl_motion_planning/logs/ppo-gripper-avoid-without-ou-fixedAll_2023-05-06/ppo-gripper-avoid-without-ou-fixedAll_11-01-26",
+            "output_file":	{
+                "<_io.TextIOWrapper name='/home/magic/ZhangGZ/intention-aware-HRC/drl_motion_planning/logs/ppo-gripper-avoid-without-ou-fixedAll_2023-05-06/ppo-gripper-avoid-without-ou-fixedAll_11-01-26/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"ppo-gripper-avoid-without-ou-fixedAll",
+        "output_dir":	"/home/magic/ZhangGZ/intention-aware-HRC/drl_motion_planning/logs/ppo-gripper-avoid-without-ou-fixedAll_2023-05-06/ppo-gripper-avoid-without-ou-fixedAll_11-01-26"
+    },
+    "max_ep_len":	1000,
+    "pi_lr":	0.0003,
+    "save_freq":	10,
+    "seed":	0,
+    "steps_per_epoch":	5000,
+    "target_kl":	0.01,
+    "train_pi_iters":	80,
+    "train_v_iters":	80,
+    "vf_lr":	0.001
+}
